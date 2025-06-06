@@ -1,0 +1,4 @@
+pandas
+tradingview-datafeed
+matplotlib
+ta 

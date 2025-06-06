@@ -1,0 +1,9 @@
+{
+  "banca": 200.0,
+  "risco_percentual": 1.0,
+  "stop_win_diario": 5.0,
+  "stop_loss_diario": -5.0,
+  "historico": [],
+  "ultimo_dia": "2025-06-06",
+  "lucro_dia": 0.0
+}
