@@ -1,9 +1,640 @@
 {
-  "banca": 200.0,
-  "risco_percentual": 1.0,
-  "stop_win_diario": 5.0,
-  "stop_loss_diario": -5.0,
-  "historico": [],
-  "ultimo_dia": "2025-06-06",
-  "lucro_dia": 0.0
+  "banca": 9.41,
+  "historico": [
+    {
+      "par": "GBPUSD",
+      "timeframe": "in_5_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:12:50"
+    },
+    {
+      "par": "EURGBP",
+      "timeframe": "in_1_hour",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:12:56"
+    },
+    {
+      "par": "GBPUSD",
+      "timeframe": "in_5_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:14:06"
+    },
+    {
+      "par": "EURUSD",
+      "timeframe": "in_15_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:15:21"
+    },
+    {
+      "par": "GBPUSD",
+      "timeframe": "in_15_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:15:26"
+    },
+    {
+      "par": "GBPUSD",
+      "timeframe": "in_15_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:16:41"
+    },
+    {
+      "par": "GBPUSD",
+      "timeframe": "in_15_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:17:55"
+    },
+    {
+      "par": "GBPUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:19:09"
+    },
+    {
+      "par": "GBPUSD",
+      "timeframe": "in_15_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:19:12"
+    },
+    {
+      "par": "GBPUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:20:27"
+    },
+    {
+      "par": "GBPUSD",
+      "timeframe": "in_15_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:20:30"
+    },
+    {
+      "par": "EURGBP",
+      "timeframe": "in_15_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:20:34"
+    },
+    {
+      "par": "EURGBP",
+      "timeframe": "in_1_hour",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:20:35"
+    },
+    {
+      "par": "GBPUSD",
+      "timeframe": "in_15_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:21:48"
+    },
+    {
+      "par": "GBPUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:25:55"
+    },
+    {
+      "par": "GBPUSD",
+      "timeframe": "in_5_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:25:56"
+    },
+    {
+      "par": "GBPUSD",
+      "timeframe": "in_15_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:25:57"
+    },
+    {
+      "par": "GBPUSD",
+      "timeframe": "in_5_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:27:12"
+    },
+    {
+      "par": "GBPUSD",
+      "timeframe": "in_15_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:27:13"
+    },
+    {
+      "par": "EURGBP",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:27:15"
+    },
+    {
+      "par": "GBPUSD",
+      "timeframe": "in_5_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:29:08"
+    },
+    {
+      "par": "EURGBP",
+      "timeframe": "in_5_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:30:37"
+    },
+    {
+      "par": "EURGBP",
+      "timeframe": "in_15_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:30:38"
+    },
+    {
+      "par": "EURUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:31:42"
+    },
+    {
+      "par": "EURGBP",
+      "timeframe": "in_5_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:31:49"
+    },
+    {
+      "par": "EURGBP",
+      "timeframe": "in_15_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:31:50"
+    },
+    {
+      "par": "EURGBP",
+      "timeframe": "in_5_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:33:06"
+    },
+    {
+      "par": "EURGBP",
+      "timeframe": "in_15_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:33:07"
+    },
+    {
+      "par": "EURGBP",
+      "timeframe": "in_5_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:34:44"
+    },
+    {
+      "par": "EURGBP",
+      "timeframe": "in_15_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:34:46"
+    },
+    {
+      "par": "EURGBP",
+      "timeframe": "in_15_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:38:18"
+    },
+    {
+      "par": "EURGBP",
+      "timeframe": "in_15_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:39:33"
+    },
+    {
+      "par": "EURUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:49:04"
+    },
+    {
+      "par": "EURGBP",
+      "timeframe": "in_1_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:49:10"
+    },
+    {
+      "par": "EURUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 978.82,
+      "data": "2025-06-06 17:51:32"
+    },
+    {
+      "par": "GBPUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 979.25,
+      "data": "2025-06-06 17:52:50"
+    },
+    {
+      "par": "USDJPY",
+      "timeframe": "in_15_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 979.25,
+      "data": "2025-06-06 17:52:59"
+    },
+    {
+      "par": "EURGBP",
+      "timeframe": "in_5_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 17:55:54"
+    },
+    {
+      "par": "EURUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 983.13,
+      "data": "2025-06-06 18:10:02"
+    },
+    {
+      "par": "EURUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 982.73,
+      "data": "2025-06-06 18:11:07"
+    },
+    {
+      "par": "ETHUSD",
+      "timeframe": "in_15_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 982.72,
+      "data": "2025-06-06 18:29:25"
+    },
+    {
+      "par": "SOLUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 982.72,
+      "data": "2025-06-06 18:29:28"
+    },
+    {
+      "par": "EURUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 982.72,
+      "data": "2025-06-06 18:30:25"
+    },
+    {
+      "par": "ETHUSD",
+      "timeframe": "in_15_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 979.14,
+      "data": "2025-06-06 18:31:37"
+    },
+    {
+      "par": "SOLUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 979.14,
+      "data": "2025-06-06 18:31:40"
+    },
+    {
+      "par": "EURUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 979.14,
+      "data": "2025-06-06 18:32:37"
+    },
+    {
+      "par": "ETHUSD",
+      "timeframe": "in_15_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 981.59,
+      "data": "2025-06-06 18:33:47"
+    },
+    {
+      "par": "SOLUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 981.59,
+      "data": "2025-06-06 18:33:49"
+    },
+    {
+      "par": "EURUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 981.59,
+      "data": "2025-06-06 18:34:44"
+    },
+    {
+      "par": "ETHUSD",
+      "timeframe": "in_15_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 981.95,
+      "data": "2025-06-06 18:35:55"
+    },
+    {
+      "par": "SOLUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 981.95,
+      "data": "2025-06-06 18:35:57"
+    },
+    {
+      "par": "ETHUSD",
+      "timeframe": "in_15_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 980.86,
+      "data": "2025-06-06 18:40:39"
+    },
+    {
+      "par": "SOLUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 980.86,
+      "data": "2025-06-06 18:40:42"
+    },
+    {
+      "par": "EURUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 980.86,
+      "data": "2025-06-06 18:41:39"
+    },
+    {
+      "par": "ETHUSD",
+      "timeframe": "in_15_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 978.08,
+      "data": "2025-06-06 18:42:49"
+    },
+    {
+      "par": "SOLUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ENVIADA",
+      "lucro": 0,
+      "banca": 978.08,
+      "data": "2025-06-06 18:42:51"
+    },
+    {
+      "par": "EURUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 978.08,
+      "data": "2025-06-06 18:43:44"
+    },
+    {
+      "par": "ETHUSD",
+      "timeframe": "in_15_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 977.28,
+      "data": "2025-06-06 18:53:38"
+    },
+    {
+      "par": "SOLUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 977.28,
+      "data": "2025-06-06 18:53:41"
+    },
+    {
+      "par": "ETHUSD",
+      "timeframe": "in_15_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ENVIADA",
+      "lucro": 0,
+      "banca": 977.28,
+      "data": "2025-06-06 18:55:33"
+    },
+    {
+      "par": "SOLUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ENVIADA",
+      "lucro": 0,
+      "banca": 977.28,
+      "data": "2025-06-06 18:55:35"
+    },
+    {
+      "par": "EURUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 977.28,
+      "data": "2025-06-06 18:57:22"
+    },
+    {
+      "par": "EURUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 975.15,
+      "data": "2025-06-06 19:00:13"
+    },
+    {
+      "par": "XRPUSD",
+      "timeframe": "in_5_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 10914.43,
+      "data": "2025-06-06 20:49:44"
+    },
+    {
+      "par": "XRPUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 10866.08,
+      "data": "2025-06-06 20:54:11"
+    },
+    {
+      "par": "BCHUSD",
+      "timeframe": "in_15_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 10824.62,
+      "data": "2025-06-06 21:01:56"
+    },
+    {
+      "par": "EURUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "CALL (COMPRA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 10824.83,
+      "data": "2025-06-06 21:21:32"
+    },
+    {
+      "par": "SOLUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 10824.76,
+      "data": "2025-06-06 21:26:54"
+    },
+    {
+      "par": "BCHUSD",
+      "timeframe": "in_15_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 10824.76,
+      "data": "2025-06-06 21:28:10"
+    },
+    {
+      "par": "XRPUSD",
+      "timeframe": "in_1_minute",
+      "sinal": "PUT (VENDA)",
+      "resultado": "ERRO ENVIO",
+      "lucro": 0,
+      "banca": 10824.59,
+      "data": "2025-06-06 21:29:22"
+    }
+  ],
+  "ultimo_dia": "2025-06-07",
+  "lucro_dia": 0.0,
+  "risco_percentual_operacao": 1.0,
+  "stop_win_percentual": 5.0,
+  "stop_loss_percentual": -3.0
 }
