@@ -1,0 +1,1 @@
+start: python lucelo.py
