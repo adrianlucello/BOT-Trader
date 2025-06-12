@@ -7,6 +7,9 @@ from thedesigner import mostrar_vela_em_tempo_real
 import threading
 from setup import executar_entrada, capital_setup
 from paciencia import Paciencia
+from paulo_sizing import calcular_position_sizing
+import json
+from padrao import detectar_padroes
 
 # Mapeamento símbolo -> epic real Capital.com (apenas para envio de ordem)
 SYMBOL_TO_EPIC = {
@@ -143,12 +146,12 @@ def main():
     print("Pares disponíveis para análise:")
     for i, par in enumerate(PARES_PADRAO):
         print(f"{i+1}. {par}")
-    escolha = input("Digite o par que deseja analisar (ex: EURUSD): ").strip().upper()
-    if escolha in PARES_PADRAO:
-        par_atual_idx = PARES_PADRAO.index(escolha)
+    # Iniciar automaticamente com BTCUSD
+    if 'BTCUSD' in PARES_PADRAO:
+        par_atual_idx = PARES_PADRAO.index('BTCUSD')
     else:
-        print("Par não reconhecido, usando EURUSD por padrão.")
         par_atual_idx = 0
+    print(f"[LUCHELO] Iniciando análise automática pelo par: {PARES_PADRAO[par_atual_idx]}")
     # Iniciar Chapeleiro, TheDesigner e Paciencia automaticamente
     thread_chapeleiro = threading.Thread(target=analisar_pressao, args=(get_par_atual(),), daemon=True)
     thread_chapeleiro.start()
@@ -197,21 +200,53 @@ def main():
                 # Cálculo do stop e take combinando ATR e suporte/resistência
                 if direcao == 'BUY':
                     stop_atr = close - ATR_MULT_STOP * atr
-                    # Stop não pode ser maior que o preço de entrada
                     stop = max(suporte, stop_atr)
-                    # Take: alvo técnico (resistência) ou RR fixo, o que for mais próximo
                     take_rr = close + RR_FIXO * (close - stop)
                     take = min(resistencia, take_rr)
                 else:
                     stop_atr = close + ATR_MULT_STOP * atr
-                    # Stop não pode ser menor que o preço de entrada
                     stop = min(resistencia, stop_atr)
-                    # Take: alvo técnico (suporte) ou RR fixo, o que for mais próximo
                     take_rr = close - RR_FIXO * (stop - close)
                     take = max(suporte, take_rr)
                 epic = SYMBOL_TO_EPIC.get(par, par)
-                print(f"[LUCHELO] ENTRADA FORTE DETECTADA! Enviando ordem automática: {direcao} para {par} (epic: {epic}) ao preço {close} | Stop: {stop:.5f} | Take: {take:.5f} ...")
-                resposta = capital_setup.api.enviar_ordem(epic, direcao, 0.01, stop=stop, limit=take)
+                # --- Padrões gráficos: risco cheio ou reduzido ---
+                padroes = detectar_padroes(df_m15)
+                padrao_confirmado = False
+                if padroes:
+                    padrao = padroes[0]
+                    print(f"[PADRÃO] Padrão detectado: {padrao['tipo']} | Direção: {padrao['direcao']} | Pontos-chave: {padrao['pontos']}")
+                    if (direcao == 'BUY' and padrao['direcao'] in ['Alta', 'Indefinida']) or (direcao == 'SELL' and padrao['direcao'] in ['Baixa', 'Indefinida']):
+                        padrao_confirmado = True
+                # --- Gestão de capital dinâmica ---
+                try:
+                    saldo_api = capital_setup.api.saldo()
+                    saldo = saldo_api['accounts'][0]['balance']['balance']
+                    regras = capital_setup.api.consultar_regras_epic(epic)
+                    lote_min = regras.get('minDealSize', 0.01)
+                    valor_pip = regras.get('pipValue', 0.10)  # fallback 0.10 se não houver
+                    stop_pips = abs(close - stop) / regras.get('pip', 0.0001)  # fallback pip 0.0001
+                    risco_percent = 1.0 if padrao_confirmado else 0.5
+                    resultado_lote = calcular_position_sizing(
+                        par=par,
+                        banca=saldo,
+                        risco_percent=risco_percent,
+                        stop_pips=stop_pips,
+                        valor_pip=valor_pip,
+                        lote_min=lote_min,
+                        lote_max=100.0
+                    )
+                    lote = resultado_lote['tamanho_sugerido']
+                    print(f"[GESTÃO DE RISCO] Saldo: ${saldo:.2f} | Stop: {stop_pips:.2f} pips | Valor do pip: ${valor_pip:.4f} | Lote calculado: {lote}")
+                    for detalhe in resultado_lote['detalhes']:
+                        print(f"  - {detalhe}")
+                except Exception as e:
+                    print(f"[ERRO GESTÃO DE RISCO] Falha ao calcular lote dinâmico: {e}")
+                    lote = 0.01  # fallback
+                if padrao_confirmado:
+                    print(f"[LUCHELO] ENTRADA FORTE + PADRÃO GRÁFICO DETECTADO! Enviando ordem automática: {direcao} para {par} (epic: {epic}) ao preço {close} | Stop: {stop:.5f} | Take: {take:.5f} | Lote: {lote} (risco cheio)")
+                else:
+                    print(f"[LUCHELO] ENTRADA FORTE SEM PADRÃO GRÁFICO! Enviando ordem automática: {direcao} para {par} (epic: {epic}) ao preço {close} | Stop: {stop:.5f} | Take: {take:.5f} | Lote: {lote} (risco reduzido)")
+                resposta = capital_setup.api.enviar_ordem(epic, direcao, lote, stop=stop, limit=take)
                 print(f"[LUCHELO] Ordem enviada! Resposta: {resposta}")
                 deal_id = resposta.get('dealId') or resposta.get('dealReference')
                 if deal_id:

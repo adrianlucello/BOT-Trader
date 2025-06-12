@@ -2,3 +2,4 @@ pandas
 tradingview-datafeed
 matplotlib
 ta 
+rich
